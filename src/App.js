@@ -1,4 +1,4 @@
-
+import React, { useState } from 'react';
 import './App.css';
 
 
@@ -24,6 +24,19 @@ function App() {
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui facere in labore maxime, assumenda iure sed tenetur alias omnis eveniet similique laborum, neque porro unde ducimus officiis animi vitae! Quidem."
     }
   ]
+
+
+  return(
+    <div>
+      <div><h1>FAQ</h1></div>
+      <div>
+        {questions.map((question)=>(
+          <div key={question.id}>{question.title}</div>
+        ))}
+      </div>
+    </div>
+
+  );
  
 }
 
