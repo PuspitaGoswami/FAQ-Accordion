@@ -26,8 +26,10 @@ function App() {
   ]
 
   const [display,setDisplay] = useState(false);
+  const [selceted_id,setSelected_id] = useState(null);
 
-  const display_info = ()=>{
+  const display_info = (id)=>{
+    setSelected_id(id);
       if(display === true){
         setDisplay(false)
       }
@@ -43,9 +45,10 @@ function App() {
       <div>
         {questions.map((question)=>(
           <div key={question.id}>{question.title}
-          <button onClick={display_info}>Press</button>
+         <button onClick={() => display_info(question.id)}>Press</button>
+
             <div>
-              {display && (
+              {display && selceted_id === question.id && (
                 <div>{question.info}</div>
               )}
             </div>
