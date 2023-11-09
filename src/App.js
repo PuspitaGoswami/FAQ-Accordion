@@ -40,7 +40,7 @@ function App() {
 
 
   return(
-    <div>
+    <div className='container'>
       <div><h1>FAQ</h1></div>
       <div>
         {questions.map((question)=>(
