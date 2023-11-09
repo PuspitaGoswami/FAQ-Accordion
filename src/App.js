@@ -25,13 +25,32 @@ function App() {
     }
   ]
 
+  const [display,setDisplay] = useState(false);
+
+  const display_info = ()=>{
+      if(display === true){
+        setDisplay(false)
+      }
+      else{
+        setDisplay(true);
+      }
+  }
+
 
   return(
     <div>
       <div><h1>FAQ</h1></div>
       <div>
         {questions.map((question)=>(
-          <div key={question.id}>{question.title}</div>
+          <div key={question.id}>{question.title}
+          <button onClick={display_info}>Press</button>
+            <div>
+              {display && (
+                <div>{question.info}</div>
+              )}
+            </div>
+          </div>
+          
         ))}
       </div>
     </div>
