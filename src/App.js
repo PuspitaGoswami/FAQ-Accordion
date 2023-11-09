@@ -41,18 +41,21 @@ function App() {
 
   return(
     <div className='container'>
-      <div><h1>FAQ</h1></div>
-      <div>
+    
+      <div className='container-wrap'>
+      <div className='heading-container'><h1>Frequently Asked Questions</h1></div>
         {questions.map((question)=>(
-          <div key={question.id}>{question.title}
-         <button onClick={() => display_info(question.id)}>Press</button>
+          <div>
+          <div className='question-container' key={question.id}>{question.title}
+         <button className='button' onClick={() => display_info(question.id)}>Press</button>
+         </div>
 
-            <div>
+            <div className='questions'>
               {display && selceted_id === question.id && (
-                <div>{question.info}</div>
+                <div className='answeer'>{question.info}</div>
               )}
             </div>
-          </div>
+         </div>
           
         ))}
       </div>

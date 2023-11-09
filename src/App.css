@@ -6,3 +6,37 @@
   height: 100vh;
   background-color: #ECF7FE;
 }
+
+.container-wrap{
+  background-color: #12326F;
+  width: 100%;
+  height: 100vh;
+  margin: 100px 100px;
+  
+
+}
+.heading-container{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.heading-container h1{
+  font-size: 30px;
+  color: #FFFFFF;
+}
+.question-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f6f7f9;
+
+}
+.questions{
+  
+}
+.answer{
+  display: flex;
+  justify-content: center;
+}
