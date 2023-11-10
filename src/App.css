@@ -34,9 +34,12 @@
 
 }
 .questions{
-  
+  background-color: #2b4d8e;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 .answer{
   display: flex;
   justify-content: center;
+  padding: 20px;
 }

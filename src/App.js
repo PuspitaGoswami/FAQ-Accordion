@@ -52,7 +52,7 @@ function App() {
 
             <div className='questions'>
               {display && selceted_id === question.id && (
-                <div className='answeer'>{question.info}</div>
+                <div className='answer'>{question.info}</div>
               )}
             </div>
          </div>
