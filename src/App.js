@@ -45,9 +45,11 @@ function App() {
       <div className='container-wrap'>
       <div className='heading-container'><h1>Frequently Asked Questions</h1></div>
         {questions.map((question)=>(
-          <div>
+          <div className='wrapper'>
           <div className='question-container' key={question.id}>{question.title}
-         <button className='button' onClick={() => display_info(question.id)}>Press</button>
+          <div>
+         <button className='button' onClick={() => display_info(question.id)}> +</button>
+         </div>
          </div>
 
             <div className='questions'>

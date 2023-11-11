@@ -27,19 +27,29 @@
   color: #FFFFFF;
 }
 .question-container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: #f6f7f9;
+  padding: 0px 25px 25px 0px;
+  display: flex;
+    justify-content: space-between;
 
+}
+.wrapper{
+  margin-left: 200px;
+  margin-right: 200px;
 }
 .questions{
   background-color: #2b4d8e;
-  margin-left: 200px;
-  margin-right: 200px;
+
 }
 .answer{
   display: flex;
   justify-content: center;
   padding: 20px;
+  color:#f6f7f9 ;
 }
+.button{
+  font-size: 20px;
+  background-color:#2b4d8e ;
+  color: #f6f7f9;
+}
+
