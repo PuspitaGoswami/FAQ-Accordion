@@ -26,22 +26,27 @@ function App() {
   ]
 
   const [display,setDisplay] = useState(false);
-  const [selceted_id,setSelected_id] = useState(null);
+  const [selceted_id,setSelected_id] = useState([]);
 
   const display_info = (id)=>{
-    setSelected_id(id);
-      if(display === true){
-        setDisplay(false)
-      }
-      else{
-        setDisplay(true);
-      }
+    console.log('id ', id);
+  
+    
+    setDisplay(!display);
+
+    if(selceted_id.includes(id)){
+     setSelected_id(selceted_id.filter(selected=>selected !== id))
+    }
+    else{
+       setSelected_id([...selceted_id,id]);
+    }
+    console.log('jhjhj', selceted_id);
   }
 
 
   return(
     <div className='container'>
-    
+  
       <div className='container-wrap'>
       <div className='heading-container'><h1>Frequently Asked Questions</h1></div>
         {questions.map((question)=>(
@@ -53,7 +58,7 @@ function App() {
          </div>
 
             <div className='questions'>
-              {display && selceted_id === question.id && (
+              {selceted_id.includes(question.id) && (
                 <div className='answer'>{question.info}</div>
               )}
             </div>
